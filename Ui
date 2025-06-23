@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Mirror</title>
+  <script defer src="script.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    .box { border: 1px solid #ccc; padding: 20px; margin: 10px auto; width: 300px; border-radius: 10px; }
+    video { width: 100%; border-radius: 10px; }
+    #result { font-size: 18px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🧠 Mood Mirror</h1>
+  <p>Track your mood from screen & face</p>
+
+  <div class="box">
+    <h2>Instagram Content Mood</h2>
+    <p>Sad: 60% | Positive: 25% | Neutral: 15%</p>
+  </div>
+
+  <div class="box">
+    <h2>Facial Mood Check-in</h2>
+    <video id="video" autoplay muted></video>
+    <p id="result">Detecting...</p>
+    <button onclick="detectMood()">Check Mood</button>
+  </div>
+</body>
+</html>
